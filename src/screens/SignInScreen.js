@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import {auth} from"../firebase"
+import { auth } from "../firebase";
 import "./SignInScreen.css";
 
 function SignInScreen() {
@@ -24,7 +24,7 @@ function SignInScreen() {
 
   const signIn = (e) => {
     e.preventDefault();
-       auth
+    auth
       .signInWithEmailAndPassword(
         emailRef.current.value,
         passwordRef.current.value
@@ -36,7 +36,7 @@ function SignInScreen() {
         alert(err);
       });
   };
-  
+
   return (
     <div className="signInScreen">
       <form>
